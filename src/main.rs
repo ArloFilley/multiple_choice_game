@@ -22,8 +22,8 @@ fn main() {
 
 fn read_file() {
     let intro = fs::read_to_string("story.txt").unwrap();
-    for (i, line) in intro.lines().enumerate() {
-        if i == 0 {
+    for line in intro.lines() {
+        if line.to_lowercase().eq("newchoice") {
             let _pointer = line;
         } else {
             println!("{}",line);

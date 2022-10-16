@@ -4,7 +4,6 @@ pub fn cursor_position(x: usize, y: usize) {
     print!("{}", termion::cursor::Goto(x as u16, y as u16));
 }
 
-
 pub fn clear_screen() {
     print!("{}", termion::clear::All)
 }
