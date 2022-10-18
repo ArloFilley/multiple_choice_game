@@ -1,0 +1,8 @@
+This is a multiple choice adventure game written by:
+Arlo Filley
+it uses a specially encoded text file, story.txt, to decide where to send
+players where to add fights where to end etc.
+                  
+choose q to exit at any time
+press any key to start the story
+hope you enjoy

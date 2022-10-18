@@ -1,5 +1,163 @@
+newchoice
 I
 You lift your arm to find that your surroundings are cold and damp. Where is this place?
 You bolt up to a sharp pain from your spine, clearly you've been here on the floor for a while.
 Feeling your back scream at you every step of the way you stumble towards the faint light you see.
 Rounding the corner you reach a fork, not knowing which way to go you decide to
+A: go left
+B: go right
+choices
+AB
+
+NEWCHOICE
+IA
+You chose left. What a dumb decision. I mean what kind of moron chooses left?
+Nontheless having chosen your dumb fate you continue down the tunnel 
+You come upon a chamber and go to look around when suddenly a monster crawls out from ahead of you
+FIGHT
+GREMLIN
+GOTO
+IG
+
+NEWCHOICE
+IG
+you stagger on feeling slightly weaker after your encounter with the gremlin
+continuing down the tunnel you find that the passage has been blocked by a pile
+of rubble. looks like that gremlin wasn't the only monster around here
+thinking yourself lucky you turn around going back in the direction you came from.
+
+you arrive back at the fork in the tunnel you were just at. thinking about which way
+you went last time you decide to go
+A: left
+B: right
+choices
+AB
+
+NEWCHOICE
+IGB
+GOTO
+IB
+
+NEWCHOICE
+IGA
+Really, you want to go the same way again I really wouldn't recommend this but whatever it's your choice I guess.
+You head left. The direction you just came from, despite the fact you know that it's a dead end.
+you get hit in the head by a falling rock and die.
+GAMEOVER
+
+NEWCHOICE
+IAB
+GOTO
+IB
+
+NEWCHOICE
+IB
+You continue on the right path of the tunnel.
+With every step you feel like you are getting stronger.
+Eventually after a while of walking, you reach an exit to the tunnel. where do you go next?
+A: go to the forest
+B: go to the town
+CHOICES
+AB
+
+NEWCHOICE
+IBA
+You briskly begin to walk. Heading the direction of the forest.
+After a few minutes you are surrounded by dense foliage and brush of the forest floor.
+Out of the corner of your eye you notice a golden glint.
+A: check it out
+B: assume it's something dangerous
+CHOICES
+AB
+
+NEWCHOICE
+IBB
+You walk into town. From outside the walls you hear the sounds of the market place.
+Out of the town gate walks a hooded man with skin as white as bone.
+He calls to you "YOU SON OF A BITCH A THOUGHT YOU WOULD DIE IN THAT CAVE!"
+Unsheathing his dagger you know that whoever he is he wants you dead
+thinking quickly do you
+A: attempt to hide
+B: turn and fight 
+CHOICES
+AB
+
+NEWCHOICE
+IBBA
+You dart to the side attempting to hide in some nearby long grass.
+Frantically you try to slow your breathing,
+as you hear his footsteps,
+on the muddy groud nearby.
+He seems to be getting impatient cursing about how you you are still alive
+eventually when the sun goes down he decides that it isn't worth the effort and
+he heads back to town.
+A: head into town despite the risk
+B: head back to the cave to sleep the night
+C: head to the forest
+CHOICES
+ABC
+
+NEWCHOICE
+IBBAB
+you head back into the cave to sleep the night away
+GOTO
+I
+
+NEWCHOICE
+IBBAC
+you head back to the forest
+GOTO
+ABA
+
+NEWCHOICE
+IBBB
+You turn and say "Who do you think your messing with PUNK?"
+FIGHT
+THE MAN
+
+WOW not going to lie if you are reading this either you cheated or you're just an epic GAMER
+GOTO
+QEND
+
+NEWCHOICE
+QEND
+you an epic gamer have defeated the MAN
+good job
+gameover
+
+NEWCHOICE
+IBAA
+Clawing at the brush on the floor you claw towards the glint you saw.
+You feel a cold sharp edge as you burrow through the foliage.
+Pulling it out you can see its a chest. You open it to find that it contains a sword.
+You swing it around. It's excellently crafted. It feels light but sturdy and strong
+FIGHT
+LEVEL UP
+You feel it's power boost your own.
+Thinking about your next move you think it best to
+A: go to the town
+B: go into the deeper forest
+CHOICES
+AB
+
+NEWCHOICE
+IBAAA
+GOTO
+ABB
+
+NEWCHOICE
+IBAAB
+You walk deeper into the forest but you only end up getting lost in the
+thick brush. You decide that this deep in the forest is dangerous, and
+as a result you decide to head to the nearby town.
+GOTO
+ABB
+
+NEWCHOICE
+IBAB
+You continue on. Having had just about enough with the events of the day.
+The sun begins to set and you feel the warmth begin to drain.
+You look for a shelter and see a cave on the horizon.
+You wander towards the cave finding it. IT'S THE SAME CAVE YOU WOKE UP IN CONGRATS YOU'VE ACHIEVED NOTHING TODAY
+GOTO
+I

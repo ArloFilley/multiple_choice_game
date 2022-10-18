@@ -1,43 +1,38 @@
-use std::{io,fs};
+use std::io;
+use story::Story;
 
 pub mod terminal;
+pub mod block;
+pub mod story;
+pub mod enemy;
+pub mod player;
 fn main() {
-    loop {
-        terminal::clear_screen();
-        terminal::cursor_position(0, 0);
-        let mut choices = String::from("");
-        read_file();
-        for line in io::stdin().lines() {
-            let input = line.unwrap();
-            choices = read_choice(&choices, &input);
-            if choices.eq("end") {
-                break;
+    let mut story = Story::default();
+    story.read();
+    story.how_to_play();
+    let tmp = &mut String::new();
+    io::stdin().read_line(tmp).expect("Failed to read line");
+    'outer: loop {
+        story.intro();
+        'inner: loop {
+            let input = &mut String::new();
+            io::stdin().read_line(input).expect("Failed to read line");
+            story.choose(&input.to_lowercase());
+            if story.choices.eq("end") {
+                break 'inner;
+            }
+            story.read_block();
+            if story.choices.eq("end") {
+                break 'inner;
             }
         }
-        if choices.eq("end") {
-            break;
-        }
-    }
-}
 
-fn read_file() {
-    let intro = fs::read_to_string("story.txt").unwrap();
-    for line in intro.lines() {
-        if line.to_lowercase().eq("newchoice") {
-            let _pointer = line;
-        } else {
-            println!("{}",line);
+        let mut cont = String::new();
+        story.print_lose_message();
+        io::stdin().read_line(&mut cont).expect("Failed to read line");
+        cont = cont.to_lowercase();
+        if &cont[0..1] == "n" {
+            break 'outer;
         }
     }
-}
-
-fn read_choice(choices: &str, input: &str) -> String {
-    let mut choices = String::from(choices);
-    if input.len() > 0 {
-        choices.push_str(&input[0..1]);
-        if input[0..1].eq("q") {
-            choices = String::from("end");
-        }
-    }
-    choices
 }
