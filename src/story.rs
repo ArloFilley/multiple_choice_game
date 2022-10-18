@@ -3,7 +3,6 @@ use crate::enemy::Enemy;
 use crate::player::Player;
 use std::fs;
 use std::collections::HashMap;
-use crate::terminal;
 
 pub struct Story {
     pub filename: String,
@@ -114,7 +113,6 @@ impl Story {
     }
 
     pub fn intro(&mut self) {
-        terminal::clear_screen();
         self.choices = String::from("i");
         self.blocks.get(&self.choices)
             .expect("error")
@@ -122,7 +120,6 @@ impl Story {
     }
 
     pub fn read_block(&mut self) {
-        terminal::clear_screen();
         loop {
             let block = self.blocks.get(&self.choices)
                 .expect("error getting block");
@@ -183,7 +180,6 @@ impl Story {
     }
 
     pub fn how_to_play(&self) {
-        terminal::clear_screen();
         println!("{}", fs::read_to_string("welcome.txt").unwrap());
     }
 }

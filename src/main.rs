@@ -1,7 +1,6 @@
 use std::io;
 use story::Story;
 
-pub mod terminal;
 pub mod block;
 pub mod story;
 pub mod enemy;

@@ -11,7 +11,7 @@ AB
 
 NEWCHOICE
 IA
-You chose left. What a dumb decision. I mean what kind of moron chooses left?
+You chose left. What a dumb decision. I mean what kind of idiot chooses left?
 Nontheless having chosen your dumb fate you continue down the tunnel 
 You come upon a chamber and go to look around when suddenly a monster crawls out from ahead of you
 FIGHT

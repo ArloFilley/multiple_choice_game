@@ -1,4 +1,4 @@
-use crate::{player::Player, terminal};
+use crate::{player::Player};
 use std::{io};
 #[derive(Clone)]
 pub struct Enemy {
@@ -25,10 +25,7 @@ impl Enemy {
         let mut enemy = self.clone();
         println!("!!!FIGHT!!!\nYou are fighting a {}\nthe {} has {} hp", enemy.name, enemy.name, enemy.hp);
         println!("do you A: attack or B: heal");
-        for (i, line) in io::stdin().lines().enumerate() {
-            if i > 0 {
-                terminal::clear_screen();
-            }
+        for line in io::stdin().lines() {
             let line = line.expect("error");
             let input = line.to_lowercase();
             if input.eq("a") {
@@ -38,7 +35,9 @@ impl Enemy {
                 player.hp = player.hp.saturating_add(player.dmg);
                 println!("You heal yourself for {} hp\nyou are now on {}", player.dmg, player.hp);
             } else if input.eq("q") {
-                return None
+                player.hp = 0;
+                enemy.hp = 1;
+                break;
             } else {
                 println!("You sit there twiddling your thumbs");
             }
